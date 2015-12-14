@@ -1,10 +1,11 @@
 class CommentsController < ApplicationController
   before_action :set_comment, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :null_session
 
   # GET /comments
   # GET /comments.json
   def index
-    @comments = Comment.find_by_user_id(Session[:user_id]).order("created_at ASC")
+    @comments = Comment.find_by_user_id(Session[:user_id])#.order("created_at ASC")
     render json: @comments
   end
 
@@ -20,7 +21,7 @@ class CommentsController < ApplicationController
     @comment = Comment.new
   end
 
-  # GET /comments/1/edit
+  # GET   
   def edit
   end
 
@@ -44,7 +45,7 @@ class CommentsController < ApplicationController
   # PATCH/PUT /comments/1.json
   def update
     respond_to do |format|
-      if @comment.user_id==Session[:user_id] 
+      if @comment.user_id==1
         if @comment.update(comment_params)
           format.html { redirect_to @comment, notice: 'Comment was successfully updated.' }
           format.json { render :show, status: :ok, location: @comment }
@@ -59,7 +60,7 @@ class CommentsController < ApplicationController
   # DELETE /comments/1
   # DELETE /comments/1.json
   def destroy
-    if @comment.user_id==Session[:user_id] 
+    if @comment.user_id==5
       @comment.destroy
       respond_to do |format|
         format.html { redirect_to comments_url, notice: 'Comment was successfully destroyed.' }
