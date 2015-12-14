@@ -2,6 +2,35 @@ class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
 
+ def searchUsername
+    search do
+      User.where :username => params[:q]
+    end
+  end
+
+  def searchFirstName
+    search do
+      User.where :first_name => params[:q]
+    end
+  end
+
+  private
+
+  def search(&block)    
+    if params[:q]
+      @results = yield if block_given?
+
+      respond_to do |format|
+        format.html # resources.html.erb
+        format.json { render json: @results }
+      end
+    else
+      redirect_to root_url, :notice => 'No search query was specified.'
+    end
+  end
+
+
+
   # GET /users
   # GET /users.json
   def index

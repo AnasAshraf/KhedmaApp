@@ -1,15 +1,20 @@
 class LendingsController < ApplicationController
   before_action :set_lending, only: [:show, :edit, :update, :destroy]
+  protect_from_forgery with: :null_session
 
   # GET /lendings
   # GET /lendings.json
   def index
+    #@lendings = Lending.find_by_user_id(Session[user_id])
     @lendings = Lending.all
+    render json: @lendings
   end
 
   # GET /lendings/1
   # GET /lendings/1.json
   def show
+    @lendings = Lending.find(params[:id])
+    render json: @lendings
   end
 
   # GET /lendings/new
@@ -56,7 +61,7 @@ class LendingsController < ApplicationController
   def destroy
     @lending.destroy
     respond_to do |format|
-      format.html { redirect_to lendings_url, notice: 'Lending was successfully destroyed.' }
+      #format.html { redirect_to lendings_url, notice: 'Lending was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +74,7 @@ class LendingsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def lending_params
-      params[:lending]
+      # params[:lending]
+      params.require(:lending).permit(:item_id, :user_id, :lendee)
     end
 end
