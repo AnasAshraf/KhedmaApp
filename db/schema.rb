@@ -47,15 +47,14 @@ ActiveRecord::Schema.define(version: 20151214152050) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "pendingItemRequests", id: false, force: :cascade do |t|
-    t.integer  "owner"
+  create_table "pendingItemRequests", force: :cascade do |t|
     t.integer  "lendee"
     t.integer  "item_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
 
-  add_index "pendingItemRequests", ["owner", "lendee", "item_id"], name: "index_pendingItemRequests_on_owner_and_lendee_and_Item_id"
+  add_index "pendingItemRequests", ["lendee", "item_id"], name: "index_pendingItemRequests_on_lendee_and_Item_id"
 
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
