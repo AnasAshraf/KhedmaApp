@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20151214152050) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "friends", id: false, force: :cascade do |t|
+  create_table "friends", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "buddy"
     t.datetime "created_at", null: false
