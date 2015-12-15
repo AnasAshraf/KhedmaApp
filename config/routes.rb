@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :pending_requests
   resources :pending_item_requests
   resources :lendings
   resources :comments

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151214152050) do
+ActiveRecord::Schema.define(version: 20151215073259) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id"
@@ -48,6 +48,7 @@ ActiveRecord::Schema.define(version: 20151214152050) do
   end
 
   create_table "pendingItemRequests", force: :cascade do |t|
+    t.integer  "owner"
     t.integer  "lendee"
     t.integer  "item_id"
     t.datetime "created_at", null: false
@@ -55,6 +56,15 @@ ActiveRecord::Schema.define(version: 20151214152050) do
   end
 
   add_index "pendingItemRequests", ["lendee", "item_id"], name: "index_pendingItemRequests_on_lendee_and_Item_id"
+
+  create_table "pending_requests", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "item_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "pending_requests", ["user_id", "item_id"], name: "index_pending_requests_on_User_id_and_Item_id"
 
   create_table "posts", force: :cascade do |t|
     t.integer  "user_id"
