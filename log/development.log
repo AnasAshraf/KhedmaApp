@@ -8886,3 +8886,528 @@ Processing by HomeController#show as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.2ms)
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:52:16 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (2.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 237ms (Views: 229.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:52:17 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 58ms (Views: 57.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2015-12-15 20:52:19 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:52:19 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 47ms (Views: 46.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 20:52:20 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 20:52:21 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQC-AsrrX4iULmyq306LT18TUtQxq6riw1JdjtmlQrIZYcRiX5pqrCpJ0u2h7nPrVT96fENrtuTr7TsaivRGnk9VY8NsPxGw_N-Q10VM88HiInLKxKulSbqRMLi0cF5EKjsKWnqb6uq24mAjuIQo5OwE4AYkeCaq4hYPJvOx9zJ7JpRrcXWjlqHJtoeajLTGh6LB-4mp7gaQq8D84XW3HPmuV1e6mcKFx0zeDFlnRt6adoDwUS950L5GZ48APeIllVSjEQVNkiwQI7AdQnra3JDd8f37QaI9WFlWSeot7XAFCfJnmnNYJZJiOQD9xYrQX24&state=1846e38a76cde93383e7c332e8667fbf88f42d238bb2e417" for 127.0.0.1 at 2015-12-15 20:52:21 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQC-AsrrX4iULmyq306LT18TUtQxq6riw1JdjtmlQrIZYcRiX5pqrCpJ0u2h7nPrVT96fENrtuTr7TsaivRGnk9VY8NsPxGw_N-Q10VM88HiInLKxKulSbqRMLi0cF5EKjsKWnqb6uq24mAjuIQo5OwE4AYkeCaq4hYPJvOx9zJ7JpRrcXWjlqHJtoeajLTGh6LB-4mp7gaQq8D84XW3HPmuV1e6mcKFx0zeDFlnRt6adoDwUS950L5GZ48APeIllVSjEQVNkiwQI7AdQnra3JDd8f37QaI9WFlWSeot7XAFCfJnmnNYJZJiOQD9xYrQX24", "state"=>"1846e38a76cde93383e7c332e8667fbf88f42d238bb2e417", "provider"=>"facebook"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10207179851547373"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:52:22 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.1ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 45ms (Views: 45.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/comments.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/friends.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/home.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/pending_item_requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/pending_requests.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/lendings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/posts.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/scaffolds.self-31d88df1991dc7bd17fe7766691c26d4d0f832a40abf2afbe3e4dc1d16d7c715.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/comments.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/friends.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/home.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/lendings.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/pending_item_requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/pending_requests.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/posts.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-15 21:14:36 +0200
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 21:14:39 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 21:14:40 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAd77qQfjr9JB1SvGcWhy1MxbGrf_98joQrD3n0d210XCS-iP8OA-tptusgHZZqKY992VAvxSir6N0jSZmbFqpOYSXyAjJotKHSWOesUlYx4HCwVOxju0kDvtEeDLTL0gpU4j7v37Zaaj4Yfvg255_4hhJJhouPNIc53pfaCJl8fS4sMytSFuS9PydMiqOWUP4aoavpPWfYpb0ssfxibs_-7Wl6_RDh1y4Fq7F1RmTCMxmCsMh_UZaSd7EAExw1LoN_aDZ_n9rPUPKwMagFif5gBP4kvuiHBDx20T5SK0Xb66KRL6OnYoezNzXBlzicm20&state=263853b5910aa0db390f0ff67f2c2f7da2b767d5d5c9d93c" for 127.0.0.1 at 2015-12-15 21:15:08 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAd77qQfjr9JB1SvGcWhy1MxbGrf_98joQrD3n0d210XCS-iP8OA-tptusgHZZqKY992VAvxSir6N0jSZmbFqpOYSXyAjJotKHSWOesUlYx4HCwVOxju0kDvtEeDLTL0gpU4j7v37Zaaj4Yfvg255_4hhJJhouPNIc53pfaCJl8fS4sMytSFuS9PydMiqOWUP4aoavpPWfYpb0ssfxibs_-7Wl6_RDh1y4Fq7F1RmTCMxmCsMh_UZaSd7EAExw1LoN_aDZ_n9rPUPKwMagFif5gBP4kvuiHBDx20T5SK0Xb66KRL6OnYoezNzXBlzicm20", "state"=>"263853b5910aa0db390f0ff67f2c2f7da2b767d5d5c9d93c", "provider"=>"facebook"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10153889047117481"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("provider", "uid", "photo", "name", "oauth_token", "oauth_expires_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "10153889047117481"], ["photo", "http://graph.facebook.com/10153889047117481/picture?type=square"], ["name", "Rana El-Bendary"], ["oauth_token", "CAAF6JmZBIkIEBALZCx9O0wYZAdW0mVlOw9zrsd6T3qjMsZA1Kg7ldyALeqnoGQmy0fgYgyef15VyvyJZC8CDP8PyHfgsed43y3RaMdyuTJtgwHKSWFwZAuWqZBxJU0ntvme3tMowIGpuEWXBwnGrqnt1CTd2B1wGsVoSSov4tm4kGbYyA6QkahSVJDF8EHGE0IUQ7VAMmFj4wZDZD"], ["oauth_expires_at", "2016-02-13 17:53:58.000000"], ["created_at", "2015-12-15 19:15:09.666343"], ["updated_at", "2015-12-15 19:15:09.666343"]]
+  [1m[36m (81.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 89ms (ActiveRecord: 82.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:15:09 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 76ms (Views: 75.5ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users"
+
+
+Started GET "/signout" for 127.0.0.1 at 2015-12-15 21:15:47 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 21:15:47 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151215151735)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (26.7ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215151735"]]
+  [1m[36m (86.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  DROP INDEX "index_pending_requests_on_User_id_and_Item_id"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "pending_requests"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215073259"]]
+  [1m[36m (75.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152031"]]
+  [1m[36m (64.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  DROP INDEX "index_friends_on_user_id_and_buddy"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "friends"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152019"]]
+  [1m[36m (116.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "lendings"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152004"]]
+  [1m[36m (78.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151952"]]
+  [1m[36m (64.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151935"]]
+  [1m[36m (86.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "weight" integer NOT NULL, "description" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151935"]]
+  [1m[36m (99.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151952"]]
+  [1m[36m (75.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "lendings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "lendee" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152004"]]
+  [1m[36m (75.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "buddy" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_friends_on_user_id_and_buddy" ON "friends" ("user_id", "buddy")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152019"]]
+  [1m[36m (97.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152031"]]
+  [1m[36m (86.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "pending_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_pending_requests_on_User_id_and_Item_id" ON "pending_requests" ("User_id", "Item_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215073259"]]
+  [1m[35m (86.3ms)[0m  commit transaction
+Migrating to CreateUsers (20151215151735)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar, "uid" varchar, "name" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "username" varchar, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "gender" varchar, "photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215151735"]]
+  [1m[35m (97.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:38:45 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (1.2ms)
+Completed 500 Internal Server Error in 601ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/anas/Desktop/KhedmaApp/app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+        first_name: first_name
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+        last_name: last_name
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+        username: username
+                 ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+        gender:gender
+               ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+        location: location
+                 ^):
+  app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3003734400285412465_52018960'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (17.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (11.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (53.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:38:46 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/anas/Desktop/KhedmaApp/app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+        first_name: first_name
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+        last_name: last_name
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+        username: username
+                 ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+        gender:gender
+               ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+        location: location
+                 ^):
+  app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3003734400285412465_52018960'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.5ms)
+
+
+Started POST "/console/repl_sessions/7722886613b2d556c7ecf97e8257ddbe/trace" for 127.0.0.1 at 2015-12-15 23:39:14 +0200
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:39:47 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 500 Internal Server Error in 132ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=1):
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb___3003734400285412465_52018960'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (9.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:40:10 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 68ms (Views: 67.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 23:40:13 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 23:40:14 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCxKUyg6ozuGF4Sc_XfR904gKL6FlA6NidtIy5wNIBOoe02aw2cfQ4bPVtOtdYvn-87tgWE2NBNTfkPsP3SJeSwJrcd5b57hpiukoL5xTViBArx8_BETYd4byAB0o8EnjpLCyBPyI6-8mJNOgJSvr8MwQUfnV_urLaK4vax51Xab4F-yZ0Z3-MIamYeVlrES4qeMU9CKSbpwxM2gRYUabxQRehCNpu7DPcTb_ygc8-yYXtX0jNjQjFxnpobfFyz5wPPaidaX4Oh8BvSotW1g8xRxfSF_RfagxgG5zwti5uGewAsThUH08VmlEEFVi0xV48&state=2f740b473c55b52e093d0e7178f52fe011602bac159bdd2f" for 127.0.0.1 at 2015-12-15 23:40:15 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCxKUyg6ozuGF4Sc_XfR904gKL6FlA6NidtIy5wNIBOoe02aw2cfQ4bPVtOtdYvn-87tgWE2NBNTfkPsP3SJeSwJrcd5b57hpiukoL5xTViBArx8_BETYd4byAB0o8EnjpLCyBPyI6-8mJNOgJSvr8MwQUfnV_urLaK4vax51Xab4F-yZ0Z3-MIamYeVlrES4qeMU9CKSbpwxM2gRYUabxQRehCNpu7DPcTb_ygc8-yYXtX0jNjQjFxnpobfFyz5wPPaidaX4Oh8BvSotW1g8xRxfSF_RfagxgG5zwti5uGewAsThUH08VmlEEFVi0xV48", "state"=>"2f740b473c55b52e093d0e7178f52fe011602bac159bdd2f", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `from_omniauth' for #<Class:0x007fe661fd12f0>):
+  app/controllers/sessions_controller.rb:3:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (18.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:43:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 236ms (Views: 229.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:43:30 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 52ms (Views: 51.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 23:43:31 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 23:43:35 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQBNWflMiwj8ODcLIcZFlKH-utqwfQS00CZN0FCexrgfesObaEw77jq1Tb5CZannMIUPqdCMnGgJOJ4N0Bd9TE4VfLffeMnk3uq_856IgMnPi81YQudL-oeoYKWq6-mO_jjfCL2gnccJcdX80rse_u63l2z6PYnms_MI1XqLhZ31rgCXmqqx6t_zZv-Ek9Ynh37Wm0CxsIkMuF8PrdcNiV2pwYjN3X29l8weyFkDZXgG_0gTPGiA7w3vd2Pdw7OBtbSCuud3odWUUUztHnBv8GspPvdrnl8-TR2KHw0SWTybuAQ3omDVMKpHqCEn3HjQi7o&state=b3f8886c2e0772c8832f5bf7bca8f16a9d4ee2aeb7b538b1" for 127.0.0.1 at 2015-12-15 23:43:35 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQBNWflMiwj8ODcLIcZFlKH-utqwfQS00CZN0FCexrgfesObaEw77jq1Tb5CZannMIUPqdCMnGgJOJ4N0Bd9TE4VfLffeMnk3uq_856IgMnPi81YQudL-oeoYKWq6-mO_jjfCL2gnccJcdX80rse_u63l2z6PYnms_MI1XqLhZ31rgCXmqqx6t_zZv-Ek9Ynh37Wm0CxsIkMuF8PrdcNiV2pwYjN3X29l8weyFkDZXgG_0gTPGiA7w3vd2Pdw7OBtbSCuud3odWUUUztHnBv8GspPvdrnl8-TR2KHw0SWTybuAQ3omDVMKpHqCEn3HjQi7o", "state"=>"b3f8886c2e0772c8832f5bf7bca8f16a9d4ee2aeb7b538b1", "provider"=>"facebook"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "10207179851547373"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "10207179851547373"], ["name", "Anas Ashraf"], ["photo", "http://graph.facebook.com/10207179851547373/picture?type=square"], ["created_at", "2015-12-15 21:43:36.891845"], ["updated_at", "2015-12-15 21:43:36.891845"]]
+  [1m[36m (79.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 102ms (ActiveRecord: 80.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:43:36 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
