@@ -9411,3 +9411,568 @@ Processing by HomeController#show as HTML
   [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
 Completed 200 OK in 63ms (Views: 62.4ms | ActiveRecord: 0.2ms)
   [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:54:43 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 193ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/anas/Desktop/KhedmaApp/app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+         first_name: first_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+         last_name: last_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+         username: username
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+         gender:gender
+                ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+         location: location
+                  ^):
+  app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (34.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:54:43 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.2ms)
+Completed 500 Internal Server Error in 65ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/anas/Desktop/KhedmaApp/app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+         first_name: first_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+         last_name: last_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+         username: username
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+         gender:gender
+                ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+         location: location
+                  ^):
+  app/models/user.rb:33: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/models/user.rb:34: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (15.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151215151735)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215151735"]]
+  [1m[36m (61.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  DROP INDEX "index_pending_requests_on_User_id_and_Item_id"
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "pending_requests"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215073259"]]
+  [1m[36m (97.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152031"]]
+  [1m[36m (64.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  DROP INDEX "index_friends_on_user_id_and_buddy"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "friends"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152019"]]
+  [1m[36m (64.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "lendings"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152004"]]
+  [1m[36m (87.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151952"]]
+  [1m[36m (76.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151935"]]
+  [1m[36m (75.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "weight" integer NOT NULL, "description" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151935"]]
+  [1m[36m (87.0ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151952"]]
+  [1m[36m (97.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "lendings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "lendee" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152004"]]
+  [1m[36m (64.5ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "buddy" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_friends_on_user_id_and_buddy" ON "friends" ("user_id", "buddy")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152019"]]
+  [1m[36m (63.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152031"]]
+  [1m[36m (97.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "pending_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_pending_requests_on_User_id_and_Item_id" ON "pending_requests" ("User_id", "Item_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215073259"]]
+  [1m[35m (75.2ms)[0m  commit transaction
+Migrating to CreateUsers (20151215151735)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar, "uid" varchar, "name" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "username" varchar, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "gender" varchar, "photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215151735"]]
+  [1m[35m (64.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 23:57:59 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:00:44 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 58ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (22.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (9.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (18.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:00:48 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (24.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (9.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:02:27 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/application_controller.rb:8:in `current_user'
+  app/views/layouts/application.html.erb:11:in `_app_views_layouts_application_html_erb__4047348739629407324_48823040'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (13.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (18.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:02:34 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 48ms (Views: 47.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:02:36 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:02:37 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQASdhIsp9DzkBYc_Ubz-M0baFgFD9IN4XDfOdY8KtglmDnBUJjMsLbQW-nKm_tTLmR4jL8Xr0UFwDk9YSoqtshzpBSoeRy3xnxLfaViioCkeir-OxHnEfqFcrIfa0JjMTF6zh12mj6wqHDTtgO_kyfDEVmmZsZqtZ-z5QBy-bxzhBxNGmxO6F6uofMjR9USzOABOpW8IyWg2in8uGX8sxJ1yaW--k1K7FmeSjhxJs6g6-7OvUZJlvKLpq_bAfNRySv7JrbUfbVRUo2lhq0FZevDDgMii8NoTmloi8cuFyGr-CBwB2g6gMo5hvDooBbCYXQ&state=f5e39c3e7b371439837ad249945a69d4b54c89b86ba94795" for 127.0.0.1 at 2015-12-16 00:02:38 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQASdhIsp9DzkBYc_Ubz-M0baFgFD9IN4XDfOdY8KtglmDnBUJjMsLbQW-nKm_tTLmR4jL8Xr0UFwDk9YSoqtshzpBSoeRy3xnxLfaViioCkeir-OxHnEfqFcrIfa0JjMTF6zh12mj6wqHDTtgO_kyfDEVmmZsZqtZ-z5QBy-bxzhBxNGmxO6F6uofMjR9USzOABOpW8IyWg2in8uGX8sxJ1yaW--k1K7FmeSjhxJs6g6-7OvUZJlvKLpq_bAfNRySv7JrbUfbVRUo2lhq0FZevDDgMii8NoTmloi8cuFyGr-CBwB2g6gMo5hvDooBbCYXQ", "state"=>"f5e39c3e7b371439837ad249945a69d4b54c89b86ba94795", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (9.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (19.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:02:49 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 47ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:02:51 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:02:52 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQCF5kUSKGLVS0t80Pe4HEYzrdIse4sd2ArGjTc0JHQf3BUT4EDRDGFWX7bGfmG-ByadsZVXaubTrB3uDzxigKx0ybWiPaGhBPPTD4YvdrqPFbGdjkHWyM-v7Uu3tLoD0Qr6VRCUnScCm3QYIkSEe51KybkPgFEckYt3lTmOCIf2GGtF4YTE2jwnWdf5B87y-dkmOrLYTyJOpbeyF_eDc5SL61iuQyC8uSpgpInMwI0tBxV4UeADdvf2UlWewuMH6zfMBmdDPLDwR1YtS3TyBzO1gykcQTXN7bWQeuddO-yn-4GT5wOoqejUG4JCRdR6qCM&state=84a8175eff6e7957920268da5572101c2bb5235ffc9363fa" for 127.0.0.1 at 2015-12-16 00:02:52 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQCF5kUSKGLVS0t80Pe4HEYzrdIse4sd2ArGjTc0JHQf3BUT4EDRDGFWX7bGfmG-ByadsZVXaubTrB3uDzxigKx0ybWiPaGhBPPTD4YvdrqPFbGdjkHWyM-v7Uu3tLoD0Qr6VRCUnScCm3QYIkSEe51KybkPgFEckYt3lTmOCIf2GGtF4YTE2jwnWdf5B87y-dkmOrLYTyJOpbeyF_eDc5SL61iuQyC8uSpgpInMwI0tBxV4UeADdvf2UlWewuMH6zfMBmdDPLDwR1YtS3TyBzO1gykcQTXN7bWQeuddO-yn-4GT5wOoqejUG4JCRdR6qCM", "state"=>"84a8175eff6e7957920268da5572101c2bb5235ffc9363fa", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+LoadError (cannot load such file -- fb_graph2):
+  app/models/user.rb:2:in `<class:User>'
+  app/models/user.rb:1:in `<top (required)>'
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (10.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (25.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (10.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (20.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:02:58 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:03:01 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:03:01 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAbgRaQMBfrnU_AIKuGZhY5KTzPjfX0VKGJ1intiU227j43UrbSEFKQxuim0gs0Zt_5ivehIYSpzl0PO5IXJ_Pa87nvmrpvlQ9SZpiNZgk68DAjfg5PHG9rSuDgw-EYxLBoK60ZPgnzX_h91qvPFu9UJ_kiE9OCK1L-__-hhCq3C2dzY9px3vxIHV2PN6cAli4s430fGMfOwfFFbLeNV3hcTWDzxNT3o0FnvvorCexDe3_UHP1lNzdngUzrI8hKE0BHrshbx7kNZMySoK521EpJ8udhx5ee1BLGDFTi7ocTc3TisHLy66AwsDYHtrzGmU4&state=b5abb0245588d3e030ef272840a163ed6e45a1970e960a32" for 127.0.0.1 at 2015-12-16 00:03:01 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAbgRaQMBfrnU_AIKuGZhY5KTzPjfX0VKGJ1intiU227j43UrbSEFKQxuim0gs0Zt_5ivehIYSpzl0PO5IXJ_Pa87nvmrpvlQ9SZpiNZgk68DAjfg5PHG9rSuDgw-EYxLBoK60ZPgnzX_h91qvPFu9UJ_kiE9OCK1L-__-hhCq3C2dzY9px3vxIHV2PN6cAli4s430fGMfOwfFFbLeNV3hcTWDzxNT3o0FnvvorCexDe3_UHP1lNzdngUzrI8hKE0BHrshbx7kNZMySoK521EpJ8udhx5ee1BLGDFTi7ocTc3TisHLy66AwsDYHtrzGmU4", "state"=>"b5abb0245588d3e030ef272840a163ed6e45a1970e960a32", "provider"=>"facebook"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1  [["provider", "facebook"], ["uid", "10207179851547373"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("provider", "uid", "name", "photo", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "10207179851547373"], ["name", "Anas Ashraf"], ["photo", "http://graph.facebook.com/10207179851547373/picture?type=square"], ["created_at", "2015-12-15 22:03:02.112357"], ["updated_at", "2015-12-15 22:03:02.112357"]]
+  [1m[36m (73.3ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 95ms (ActiveRecord: 74.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:03:02 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 50ms (Views: 49.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/signout" for 127.0.0.1 at 2015-12-16 00:03:13 +0200
+Processing by SessionsController#destroy as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:03:13 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.2ms)
+Completed 200 OK in 48ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:03:15 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 56ms (Views: 55.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:03:17 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 73ms (Views: 72.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:03:19 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:03:19 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAIBVLQAOSnrWcaD4wuhkcNbqki1Z1w4eLKRYvygMB9DXrCbAuZsh3Io7ISpfuLy8XtFutVpWTU5EVyCzIn017DeoOUkiOc3wT8EYM74GArBa--iwIaqeno-iBXv42ttfSx4IvEAjzA4IgDAz-AjpLtp0FegCyJvPOq2Rtx0cGxFcp7MMG6KhuTrcokzHT5jFB3cXF7cIWPwoeaAvwJp0uI8rNyD8SSJSGT--wg-qekDA5JOKp4brsAHsHRmWPd5hOTvI8UvjaXznXY5FbKkUoL-rLxvIZtiedo--8q4QXISxpmOcdwD6pWJQeAGmioIE0&state=f18d0f79bb590f6a8df34ff842e577d90307eb233938788f" for 127.0.0.1 at 2015-12-16 00:03:20 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAIBVLQAOSnrWcaD4wuhkcNbqki1Z1w4eLKRYvygMB9DXrCbAuZsh3Io7ISpfuLy8XtFutVpWTU5EVyCzIn017DeoOUkiOc3wT8EYM74GArBa--iwIaqeno-iBXv42ttfSx4IvEAjzA4IgDAz-AjpLtp0FegCyJvPOq2Rtx0cGxFcp7MMG6KhuTrcokzHT5jFB3cXF7cIWPwoeaAvwJp0uI8rNyD8SSJSGT--wg-qekDA5JOKp4brsAHsHRmWPd5hOTvI8UvjaXznXY5FbKkUoL-rLxvIZtiedo--8q4QXISxpmOcdwD6pWJQeAGmioIE0", "state"=>"f18d0f79bb590f6a8df34ff842e577d90307eb233938788f", "provider"=>"facebook"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+SyntaxError (/home/anas/Desktop/KhedmaApp/app/models/user.rb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+         first_name: first_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+         last_name: last_name
+                   ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+         username: username
+                  ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+         gender:gender
+                ^
+/home/anas/Desktop/KhedmaApp/app/models/user.rb:38: syntax error, unexpected ':', expecting keyword_end
+         location: location
+                  ^):
+  app/models/user.rb:34: syntax error, unexpected tIDENTIFIER, expecting ')'
+  app/models/user.rb:35: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:36: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:37: syntax error, unexpected ':', expecting keyword_end
+  app/models/user.rb:38: syntax error, unexpected ':', expecting keyword_end
+  app/controllers/sessions_controller.rb:6:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (14.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (8.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (20.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:04:49 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 54ms (Views: 53.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:04:51 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-16 00:04:51 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQAPmrfNK16e_DO5WAxy7fMpy3KNlnR-GHfYxcGGbrpCPWbor86k1poPG5IWyiNsgU_LquOC46cYHiBjvAhH_UeTeLr5ojq6iLTLRJp_RhKvkqwrk_R0vQJOe6aI7QxtEZ1bYYU9alu09eW_veUUgu5x9ze-jcxHcPDUjPFshcFFgeHzO8YVoQuyB89HFf-17-8U8SKa7VVNYd98Bw9s6jy1wskBQdA3lWnA4aao4EDO506zO9pLH43pXfIcW388Ik7g9dsq9TsuG--Eu9a521SAs6hZOv14-HGti0qYnYkx53Cw90eVisEM55QUhwMbOvQ&state=55b236b13dade910650d1a4730d8e8eee6f6b42b04844886" for 127.0.0.1 at 2015-12-16 00:04:52 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQAPmrfNK16e_DO5WAxy7fMpy3KNlnR-GHfYxcGGbrpCPWbor86k1poPG5IWyiNsgU_LquOC46cYHiBjvAhH_UeTeLr5ojq6iLTLRJp_RhKvkqwrk_R0vQJOe6aI7QxtEZ1bYYU9alu09eW_veUUgu5x9ze-jcxHcPDUjPFshcFFgeHzO8YVoQuyB89HFf-17-8U8SKa7VVNYd98Bw9s6jy1wskBQdA3lWnA4aao4EDO506zO9pLH43pXfIcW388Ik7g9dsq9TsuG--Eu9a521SAs6hZOv14-HGti0qYnYkx53Cw90eVisEM55QUhwMbOvQ", "state"=>"55b236b13dade910650d1a4730d8e8eee6f6b42b04844886", "provider"=>"facebook"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ? LIMIT 1[0m  [["provider", "facebook"], ["uid", "10207179851547373"]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 10ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-16 00:04:52 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 51ms (Views: 50.8ms | ActiveRecord: 0.1ms)
+  [1m[35mUser Load (0.9ms)[0m  SELECT "users".* FROM "users"

@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+  # require 'fb_graph2'
 	has_many :items ,dependent: :destroy
 	has_many :friends ,dependent: :destroy
 	has_many :users , :through => :friends 
@@ -30,11 +31,11 @@ class User < ActiveRecord::Base
         name: name,
         email: email,
         photo: photo
-        # first_name: first_name
-        # last_name: last_name
-        # username: username
-        # gender:gender
-        # location: location
+         # first_name: first_name
+         # last_name: last_name
+         # username: username
+         # gender:gender
+         # location: location
         )
         find_by(uid: uid)
       end
