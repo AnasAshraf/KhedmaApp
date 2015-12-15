@@ -8716,3 +8716,173 @@ Started GET "/" for 127.0.0.1 at 2015-12-15 18:21:37 +0200
 Processing by HomeController#show as HTML
   Rendered home/show.html.erb within layouts/application (0.0ms)
 Completed 200 OK in 59ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20151215151735)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mDROP TABLE "users"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215151735"]]
+  [1m[36m (78.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  DROP INDEX "index_pending_requests_on_User_id_and_Item_id"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "pending_requests"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151215073259"]]
+  [1m[36m (108.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "comments"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152031"]]
+  [1m[36m (76.2ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+[0m
+  [1m[35m (0.2ms)[0m  DROP INDEX "index_friends_on_user_id_and_buddy"
+  [1m[36m (0.1ms)[0m  [1mDROP TABLE "friends"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152019"]]
+  [1m[36m (75.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "lendings"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214152004"]]
+  [1m[36m (87.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "posts"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151952"]]
+  [1m[36m (65.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "items"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151214151935"]]
+  [1m[36m (87.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateItems (20151214151935)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "items" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "weight" integer NOT NULL, "description" varchar, "user_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151935"]]
+  [1m[36m (72.7ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePosts (20151214151952)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214151952"]]
+  [1m[36m (87.1ms)[0m  [1mcommit transaction[0m
+Migrating to CreateLendings (20151214152004)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "lendings" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "lendee" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152004"]]
+  [1m[36m (64.8ms)[0m  [1mcommit transaction[0m
+Migrating to CreateFriends (20151214152019)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "friends" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "buddy" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_friends_on_user_id_and_buddy" ON "friends" ("user_id", "buddy")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152019"]]
+  [1m[36m (86.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateComments (20151214152031)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "comments" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "post_id" integer, "comment" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151214152031"]]
+  [1m[36m (75.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePendingRequests (20151215073259)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "pending_requests" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "item_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  CREATE  INDEX "index_pending_requests_on_User_id_and_Item_id" ON "pending_requests" ("User_id", "Item_id")
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215073259"]]
+  [1m[35m (74.9ms)[0m  commit transaction
+Migrating to CreateUsers (20151215151735)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "provider" varchar, "uid" varchar, "name" varchar, "oauth_token" varchar, "oauth_expires_at" datetime, "username" varchar, "first_name" varchar, "last_name" varchar, "email" varchar, "location" varchar, "gender" varchar, "photo" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151215151735"]]
+  [1m[35m (98.1ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_friends_on_user_id_and_buddy' AND type='index'
+
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pendingItemRequests_on_lendee_and_Item_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_pending_requests_on_User_id_and_Item_id' AND type='index'
+
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:34:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 233ms (Views: 225.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:34:34 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 53ms (Views: 52.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 20:34:36 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook" for 127.0.0.1 at 2015-12-15 20:34:36 +0200
+(facebook) Request phase initiated.
+
+
+Started GET "/auth/facebook/callback?code=AQDu6FqXfRFDrl8O-qCkgSdvqfhvtVsh0BLX6LhBzAae5hRfSiixp_xkadB5GDXCRUKCg8kEskDrE6qXgUUxJ7fLUqR-f6tiaH_7egYHdBtMrE2gq4klNpb5QOSjiFcSF2ARQBVFlrKde4rYre8wBm_Koom7GJ2MjHYbUclVqnwMtylYfTtrGJow2N-joj5VEo61CdMoEvWBUdYUirLSNwHvhsfHE9iGoZCUUGGkjDLXYEVdj5o351HljqDMGIzBNtdYLgdjy0fFmjP-hdaJxMTBETcThK2bQcUDHzENhaITk1gWHzlN_uqm80DkMHzhEMA&state=983ed9e54bcb9a5bed57d90f1d3bc60f55048654d0b4c123" for 127.0.0.1 at 2015-12-15 20:34:36 +0200
+(facebook) Callback phase initiated.
+Processing by SessionsController#create as HTML
+  Parameters: {"code"=>"AQDu6FqXfRFDrl8O-qCkgSdvqfhvtVsh0BLX6LhBzAae5hRfSiixp_xkadB5GDXCRUKCg8kEskDrE6qXgUUxJ7fLUqR-f6tiaH_7egYHdBtMrE2gq4klNpb5QOSjiFcSF2ARQBVFlrKde4rYre8wBm_Koom7GJ2MjHYbUclVqnwMtylYfTtrGJow2N-joj5VEo61CdMoEvWBUdYUirLSNwHvhsfHE9iGoZCUUGGkjDLXYEVdj5o351HljqDMGIzBNtdYLgdjy0fFmjP-hdaJxMTBETcThK2bQcUDHzENhaITk1gWHzlN_uqm80DkMHzhEMA", "state"=>"983ed9e54bcb9a5bed57d90f1d3bc60f55048654d0b4c123", "provider"=>"facebook"}
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."provider" = ? AND "users"."uid" = ?  ORDER BY "users"."id" ASC LIMIT 1  [["provider", "facebook"], ["uid", "10207179851547373"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("provider", "uid", "photo", "name", "oauth_token", "oauth_expires_at", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?)  [["provider", "facebook"], ["uid", "10207179851547373"], ["photo", "http://graph.facebook.com/10207179851547373/picture?type=square"], ["name", "Anas Ashraf"], ["oauth_token", "CAAF6JmZBIkIEBACZBhVYWM3E3qIRZC1tWfTX40YTvirbkhlFLEpz9ZBaldJNnbZBoBOF2h5rmwgn6CfbQtRIHZCs8XaVnzeHUUJJs6oWrv9bMA3pj5wZCklzaK3WGXwM9FQ02w9HhPaXeunIGi0pp4w6awJvhCsc7qxPsVLjbqzkq4ZBiZAFZB3cuxIHe5dZCEI4VdM66CJI3yFHQZDZD"], ["oauth_expires_at", "2016-02-13 16:09:55.000000"], ["created_at", "2015-12-15 18:34:37.397763"], ["updated_at", "2015-12-15 18:34:37.397763"]]
+  [1m[36m (79.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 103ms (ActiveRecord: 81.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-15 20:34:37 +0200
+Processing by HomeController#show as HTML
+  Rendered home/show.html.erb within layouts/application (0.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+Completed 200 OK in 66ms (Views: 64.9ms | ActiveRecord: 0.2ms)
+  [1m[36mUser Load (0.9ms)[0m  [1mSELECT "users".* FROM "users"[0m

@@ -79,6 +79,13 @@ ActiveRecord::Schema.define(version: 20151215151735) do
     t.string   "name"
     t.string   "oauth_token"
     t.datetime "oauth_expires_at"
+    t.string   "username"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "location"
+    t.string   "gender"
+    t.string   "photo"
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
   end
