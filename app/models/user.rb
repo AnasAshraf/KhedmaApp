@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
 	has_many :lendings
 	has_many :posts
 	has_many :comments
-  has_many :pending_item_requests
+  has_many :pending_requests
 
 
 

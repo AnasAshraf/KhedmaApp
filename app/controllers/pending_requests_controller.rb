@@ -24,7 +24,7 @@ class PendingRequestsController < ApplicationController
   # POST /pending_requests
   # POST /pending_requests.json
   def create
-    @pending_request = PendingRequest.new(pending_request_params)
+    @pending_request = PendingRequest.new(1,pending_request_params)
 
     respond_to do |format|
       if @pending_request.save
@@ -40,6 +40,7 @@ class PendingRequestsController < ApplicationController
   # PATCH/PUT /pending_requests/1
   # PATCH/PUT /pending_requests/1.json
   def update
+        @pending_request = PendingRequest.find(params[:id])
     respond_to do |format|
       if @pending_request.update(pending_request_params)
         format.html { redirect_to @pending_request, notice: 'Pending request was successfully updated.' }
@@ -69,6 +70,7 @@ class PendingRequestsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def pending_request_params
-      params[:pending_request]
+      # params[:pending_request]
+       params.require(:pending_request).permit(:item_id)
     end
 end
