@@ -16,7 +16,7 @@ class User < ActiveRecord::Base
       user.first_name =  auth.info.first_name
       user.last_name = auth.info.last_name
       user.gender = auth.info.gender
-      user.location = auth.info.location
+      user.location = auth.info.locale
       user.uid = auth.uid
       user.name = auth.info.name
       user.oauth_token = auth.credentials.token
