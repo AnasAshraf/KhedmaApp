@@ -4,15 +4,12 @@ class PostsController < ApplicationController
   # GET /posts
   # GET /posts.json
   def index
-    @posts = Post.find_by_user_id(Session[:user_id])
-    render json: @posts
+    @posts = Post.all
   end
 
   # GET /posts/1
   # GET /posts/1.json
   def show
-    @post = Post.find(:id)
-    render json: @post
   end
 
   # GET /posts/new
@@ -44,14 +41,12 @@ class PostsController < ApplicationController
   # PATCH/PUT /posts/1.json
   def update
     respond_to do |format|
-      if @post.user_id==Session[:user_id] 
-        if @post.update(post_params)
-          format.html { redirect_to @post, notice: 'Post was successfully updated.' }
-          format.json { render :show, status: :ok, location: @post }
-        else
-          format.html { render :edit }
-          format.json { render json: @post.errors, status: :unprocessable_entity }
-        end
+      if @post.update(post_params)
+        format.html { redirect_to @post, notice: 'Post was successfully updated.' }
+        format.json { render :show, status: :ok, location: @post }
+      else
+        format.html { render :edit }
+        format.json { render json: @post.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -59,12 +54,10 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   # DELETE /posts/1.json
   def destroy
-    if @post.user_id==Session[:user_id] 
-      @post.destroy
-      respond_to do |format|
-        format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
-        format.json { head :no_content }
-      end
+    @post.destroy
+    respond_to do |format|
+      format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
+      format.json { head :no_content }
     end
   end
 
@@ -76,6 +69,6 @@ class PostsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def post_params
-      params[:post]
+      params.require(:post).permit(:user_id,"post")
     end
 end

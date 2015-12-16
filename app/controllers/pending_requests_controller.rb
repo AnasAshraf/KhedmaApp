@@ -1,6 +1,6 @@
 class PendingRequestsController < ApplicationController
   before_action :set_pending_request, only: [:show, :edit, :update, :destroy]
-
+  protect_from_forgery with: :null_session
   # GET /pending_requests
   # GET /pending_requests.json
   def index
@@ -24,7 +24,7 @@ class PendingRequestsController < ApplicationController
   # POST /pending_requests
   # POST /pending_requests.json
   def create
-    @pending_request = PendingRequest.new(1,pending_request_params)
+    @pending_request = PendingRequest.new(pending_request_params)
 
     respond_to do |format|
       if @pending_request.save
@@ -71,6 +71,6 @@ class PendingRequestsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def pending_request_params
       # params[:pending_request]
-       params.require(:pending_request).permit(:item_id)
+       params.require(:pending_request).permit(:user_id, :item_id)
     end
 end

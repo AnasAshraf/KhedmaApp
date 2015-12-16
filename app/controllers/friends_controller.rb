@@ -32,7 +32,7 @@ class FriendsController < ApplicationController
 
   #follow
   def create
-    @friend = Friend.new(1,params[:id])
+    @friend = Friend.new(friend_params)
 
     respond_to do |format|
       if @friend.save
