@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :items
    get 'auth/:provider/callback', to: 'sessions#create'
     get 'auth/failure', to: redirect('/')
     get 'signout', to: 'sessions#destroy', as: 'signout'
@@ -14,6 +15,8 @@ Rails.application.routes.draw do
   get 'sessions/destroy'
 
   get 'home/show'
+
+  #get 'items/create'
 
   resources :pending_requests
   resources :pending_item_requests

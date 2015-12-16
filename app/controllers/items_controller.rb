@@ -2,27 +2,6 @@ class ItemsController < ApplicationController
   before_action :set_item, only: [:show, :edit, :update, :destroy]
   protect_from_forgery with: :null_session
 
-def searchItem
-    search do
-      Item.where :name => params[:q]
-    end
-  end
-
-  private
-
-  def search(&block)    
-    if params[:q]
-      @results = yield if block_given?
-
-      respond_to do |format|
-        format.html # resources.html.erb
-        format.json { render json: @results }
-      end
-    else
-      redirect_to root_url, :notice => 'No search query was specified.'
-    end
-  end
-
 
   # GET /items
   # GET /items.json
@@ -100,4 +79,25 @@ def searchItem
       #params[:item]
       params.require(:item).permit(:name, :weight)
     end
+
+    def searchItem
+    search do
+      Item.where :name => params[:q]
+    end
+  end
+
+  private
+
+  def search(&block)    
+    if params[:q]
+      @results = yield if block_given?
+
+      respond_to do |format|
+        format.html # resources.html.erb
+        format.json { render json: @results }
+      end
+    else
+      redirect_to root_url, :notice => 'No search query was specified.'
+    end
+  end
 end
