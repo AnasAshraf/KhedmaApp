@@ -56,6 +56,11 @@ class UsersController < ApplicationController
     end
   end
 
+  def findFriends
+    friends = @user.friends.collect{|se| se.buddy}
+    render json: friends
+  end
+
   # DELETE /users/1
   # DELETE /users/1.json
   # def destroy
