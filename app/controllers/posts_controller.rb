@@ -5,6 +5,7 @@ class PostsController < ApplicationController
   # GET /posts.json
   def index
     @posts = Post.all
+    render json: @posts
   end
 
   # GET /posts/1
@@ -59,6 +60,11 @@ class PostsController < ApplicationController
       format.html { redirect_to posts_url, notice: 'Post was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def findPosts
+    userposts = @posts.where(:comment_id params[:id])
+    render json: userposts
   end
 
   private

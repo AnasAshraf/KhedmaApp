@@ -69,6 +69,11 @@ class CommentsController < ApplicationController
     end
   end
 
+  def myComments
+    myComments = @comments.where(user_id: @user.id)
+    render json: myComments
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_comment
@@ -77,6 +82,8 @@ class CommentsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comment_params
-      params[:comment]
+      params.require(:comment).permit(:user_id,:post_id,"comment")
     end
+
+
 end

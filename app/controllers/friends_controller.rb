@@ -82,6 +82,6 @@ class FriendsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def friend_params
-      params[:friend]
+      params.require(:friend).permit(:user_id,"buddy")
     end
 end

@@ -100,4 +100,9 @@ class ItemsController < ApplicationController
       redirect_to root_url, :notice => 'No search query was specified.'
     end
   end
+
+  def findMyItems
+    myItems = @items.where(user_id: @user.id)
+    render json: myItems
+  end
 end
